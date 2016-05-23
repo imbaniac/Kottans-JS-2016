@@ -17,14 +17,13 @@ const plugin = tree => tree
             return !pattern.test(cls)
         })
         let jsClasses = classes.map(cls=>{
-            if(cls.indexOf('js-')!==-1){
+            if(cls.includes('js-')){
                 return cls.replace('js-', '')
             }
         })
 
 		if(okClasses.length) node.attrs['class'] = okClasses.join(' ')
         if(jsClasses.length) node.attrs['data-js'] = jsClasses.join(' ').concat(node.attrs['data-js'] || '')
-
 
         return node
 	})
