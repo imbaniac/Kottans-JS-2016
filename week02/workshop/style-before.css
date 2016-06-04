@@ -1,0 +1,94 @@
+body
+{
+    margin: 0;
+}
+
+#first
+{
+    height: 400px;
+}
+#second
+{
+    height: 600px;
+}
+#third
+{
+    height: 800px;
+}
+#fourth
+{
+    height: 1000px;
+    background: linear-gradient(to bottom,
+        rgb(255, 0, 0),
+        rgb(255, 255, 0) 15%,
+        rgb(0, 255, 0) 30%,
+        rgb(0, 255, 255) 50%,
+        rgb(0, 0, 255) 65%,
+        rgb(255, 0, 255) 80%,
+        rgb(255, 0, 0) 100%
+    )
+}
+#fifth
+{
+    height: 1000px;
+    background: #000;
+}
+#sixth
+{
+    height: 400px;
+    background: red;
+}
+
+aside
+{
+    position: fixed;
+    z-index: 1;
+    right: 70px;
+    width: 100px;
+    color: #fff;
+
+    transform: rotateZ(-90deg);
+    transform-origin: right;
+    text-align: right;
+
+    top: 0;
+    font-size: 50px;
+
+    background: rgb(255, 255, 0);
+
+    @blend-with(#fourth){
+        difference: rgb(255, 0, 0);
+    }
+}
+
+@supports (mix-blend-mode: difference)
+{
+
+    #fourth
+{
+        position: relative;
+    }
+
+    #fourth::before,
+            #fourth::after
+{
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background: rgb(255, 0, 0);
+        mix-blend-mode: difference;
+        right: 70px;
+        width: 100px;
+    }
+
+    #fourth::before
+{
+        z-index: 2;
+    }
+
+    #fourth::after
+{
+        z-index: 0;
+    }
+}

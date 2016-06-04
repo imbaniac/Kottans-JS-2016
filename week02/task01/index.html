@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout Form</title>
+    <link href=styles.css rel=stylesheet>
+    <link href=https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css rel=stylesheet>
+</head>
+<body>
+    <header>
+        <nav class=nav-header>
+            <a role=button class=nav-btn href=#><i class="fa fa-arrow-left" aria-hidden="true"></i>GO BACK</a>
+            <img src=./img/logo.png alt=logo />
+            <a role=button class=nav-btn href=#><i class="fa fa-user" aria-hidden="true"></i>SIGN IN</a>
+        </nav>
+    </header>
+    <main>
+        <form class=reg-form name=registration method=post>
+            <header class=order-info>
+                    <section class=order-summary>
+                        <h1><i class="fa fa-shopping-bag" aria-hidden=true></i>  YOUR ORDER</h1>
+                        <table class="order-table">
+                            <tr>
+                                <th>Items</th><th>Details</th><th>Price</th><th>Delivery</th>
+                            </tr>
+                            <tr>
+                                <td>2 documents</td><td>2 languages</td><td>$ 696.06</td><td>48 hours*</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <fieldset class=order-buttons>
+                        <button type=submit value=submit>PLACE ORDER</button>
+                        <button>PRINT A QUOTE</button>
+                    </fieldset>
+                <section class=help>
+                    <h1><i class="fa fa-question-circle-o" aria-hidden="true"></i>HELP CENTER</h1>
+                    <p>
+                        If you need assistance while placing your order, contact one of
+                        our beloved Project Manager by phone and email
+                    </p>
+                    <address>
+                        +971(0)555 555 &nbsp; help@qtest.com
+                    </address>
+                </section>
+            </header>
+            <section class=document-choose>
+                <h1>SELECT WHAT YOU WANT TO TRANSLATE</h1>
+                <fieldset>
+                    <label>
+                        <input type=radio value=website>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97200&w=250&h=200" alt="website image"/>
+                    </label>
+                    <label>
+                        <input type=radio value=documents>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97200&w=250&h=200" alt="document image"/>
+                    </label>
+                    <label>
+                        <input type=radio value=social-account>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97200&w=250&h=200" alt="social account image"/>
+                    </label>
+                </fieldset>
+            </section>
+            <div class=details>
+                <section class=download-files>
+                    <h2>Upload your documents <small>(Doc, Docx, Text, PDF, Markdown)</small></h2>
+                    <button class=documents>&nbsp;&nbsp;Upload a new file</button>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>FILE NAME</th>
+                                <th>FILE SIZE</th>
+                                <th>NUMBER OF WORDS</th>
+                                <th>REMOVE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>business_operations.docx</td>
+                                <td>26kb</td>
+                                <td>842</td>
+                                <td><button class=remove><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+
+                            </tr>
+                            <tr>
+                                <td>business_financials.docx</td>
+                                <td>78kb</td>
+                                <td>2,326</td>
+                                <td><button class=remove><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class=languages>
+                    <h2>Choose your languages pairings</h2>
+                    <fieldset class=language-from>
+                        <span>FROM</span>
+                            <select class=language>
+                                <option value="en-US" selected>English</option>
+                                <option value="de-DE">German</option>
+                                <option value="ar-AE">Arabic</option>
+                                <option value="ku-Arab">Kurdish</option>
+                            </select>
+                    </fieldset>
+                    <fieldset class=language-to>
+                        <span>TO</span>
+                            <select class=language>
+                                <option value="en-US" selected>English</option>
+                                <option value="de-DE">German</option>
+                                <option value="ar-AE">Arabic</option>
+                                <option value="ku-Arab">Kurdish</option>
+                            </select>
+                            <select class=language>
+                                <option value="en-US" selected>English</option>
+                                <option value="de-DE">German</option>
+                                <option value="ar-AE">Arabic</option>
+                                <option value="ku-Arab">Kurdish</option>
+                            </select>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <button class=add-lang>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </fieldset>
+                </section>
+                <div class="section-wrapper">
+                    <section class=select-tone>
+                        <h2>Select your desired tone</h2>
+                        <fieldset>
+                                <label>
+                                    <input type=radio name=tone-type>
+                                    <a role=button>
+                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                        Friendly / Casual
+                                    </a>
+                                </label>
+                                <label>
+                                    <input type=radio name=tone-type checked>
+                                    <a role=button>
+                                        <i class="fa fa-suitcase" aria-hidden="true"></i>
+                                        Corporate / Pro
+                                    </a>
+                                </label>
+                                <label>
+                                    <input type=radio name=tone-type>
+                                    <a role=button>
+                                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                        Media / Formal
+                                    </a>
+                                </label>
+                        </fieldset>
+                    </section>
+                    <section class=how-urgent>
+                        <h2>Tell us how urgent this job is</h2>
+                        <fieldset>
+                            <input type="range" min="0" max="2" value="1">
+                            <div class=time-labels>
+                                <span class="timeline-label">I got time</span>
+                                <span class="timeline-label active">Average</span>
+                                <span class="timeline-label">Yesterday</span>
+                            </div>
+                        </fieldset>
+                        <section class="timeline-info">
+                            <h2>TIMELINE INFO</h2>
+                            <p>
+                                With an <strong>average</strong> timeline set up, our expert
+                                translator can take a resonable amount of time
+                                perfecting your translation
+                            </p>
+                        </section>
+                    </section>
+                </div>
+                <section class="choose-payment">
+                    <h2>Sign up and choose a payment method</h2>
+                    <p class="sign-in">Already have an account with us? <a href="#">Sign in</a></p>
+                    <fieldset class="full-name">
+                        <label>
+                            <span>Full name</span>
+                            <input type="text" required>
+                            <span class="validation">&nbsp;</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="email-password">
+                        <label>
+                            <span>Email adress</span>
+                            <input type="email" class="signup-email" required>
+                            <span class="validation">&nbsp;</span>
+                        </label>
+                        <label>
+                            <span>Chose a password</span>
+                            <input type="password" class="signup-password" required>
+                            <span class="validation">&nbsp;</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="payment-method">
+                            <label class="button-holder">
+                                <input type="radio" name="payment-method" checked>
+                                <a role=button>
+                                    <img src="img/visa.png" alt="Visa">
+                                    <img src="img/master-card.png" alt="Master Card">
+                                </a>
+                            </label>
+                            <label class="button-holder">
+                                <input type="radio" name="payment-method">
+                                <a role=button>
+                                    <img src="img/paypal.png" alt="PayPal">
+                                </a>
+                            </label>
+                            <label class="button-holder">
+                                <input type="radio" name="payment-method">
+                                <a role=button>
+                                    <img src="img/amazon.png" alt="Amazon">
+                                </a>
+                            </label>
+                    </fieldset>
+                    <fieldset class="card-info">
+                        <label>
+                            <span>Card number</span>
+                            <input type="number" required>
+                        </label>
+                        <label>
+                            <span>Expiry date</span>
+                            <input type="date" required>
+                        </label>
+                        <label>
+                            <span>Code</span>
+                            <input type="number" min="0" max="999" required>
+                        </label>
+                    </fieldset>
+                    <fieldset class="place-order">
+                            <label>
+                                <input type="checkbox" class="agree-checkbox" required>
+                                <span class="agree-text">I agree to the <a href="#" class="terms-and-conditions">
+                                    Terms &amp; Conditions</a></span>
+                            </label>
+                            <button type="submit">Place Oreder</button>
+                            <button>Print a Quote</button>
+                    </fieldset>
+                </section>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class=footer-container>
+            <section class=about>
+                <h3>WHAT WE DO</h3>
+                <div><em>We provide a full range of language services including content development,
+                    document, website and social media account accounts translation.</em></div>
+            </section>
+            <section class=adress>
+                <h3>OUR MAIN OFFICE</h3>
+                <address>
+                    Dubai, UAE <br>
+                    P.O. Box: 502735 <br>
+                    Phone: +971(0)44278128
+                </address>
+            </section>
+            <section class=social>
+                <h3>CONNECT WITH US</h3>
+                <address>
+                    <ul>
+                        <li><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+                        <li><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+                    </ul>
+                </address>
+            </section>
+            <img src=./img/logo_black.png alt=logo />
+        </div>
+    </footer>
+</body>
+</html>

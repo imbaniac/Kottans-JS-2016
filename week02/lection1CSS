@@ -1,0 +1,27 @@
+
+/*Reset*/
+body *, :: {
+    all: unset;
+}
+
+/*[inlines]
+[important]
+[ids]
+[classes :pseudoclasses, attrs]
+[tags]*/
+
+
+a[href]:empty::after{
+    content: attr(href);
+}
+
+<input spellcheck=false></false>
+
+article {
+    /*css var */
+    --button-color: red;
+}
+
+button {
+    background: var(--button-color)
+}
