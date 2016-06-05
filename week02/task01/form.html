@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Checkout form</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header>
+		<a href="#" class="nav-button"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>&nbsp;Go back</a>
+		<a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+		<a href="#" class="nav-button"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Sign in</a>
+	</header>
+	<main>
+		<form>
+			<section class="order-info">
+				<div class="order-summary">
+					<div class="order-info-table">
+						<h1><i class="fa fa-shopping-bag" aria-hidden=true></i> Your order</h1>
+						<table>
+							<tr>
+								<th>Items</th>
+								<th>Details</th>
+								<th>Price</th>
+								<th>Delivery</th>
+							</tr>
+							<tr>
+								<td>2 documents</td>
+								<td>2 languages</td>
+								<td><data value="696.06">$ 696.06</data></td>
+								<td>48 hours*</td>
+							</tr>
+						</table>
+					</div>
+					<div class="order-buttons">
+						<button class="place-order">Place order</button>
+						<button class="print-quote">Print a quoute</button>
+					</div>
+				</div>
+				<div class="order-help">
+					<h1><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help center</h1>
+					<p>If you need assistans while placing your order, contact one of the beloved
+						Project Manager be phone or email.</p>
+					<a href="tel:+9710555555" class="phone">+971 (0) 555 555</a>
+					<a href="mailto:help@qtest.com" class="email">help@qtest.com</a>
+				</div>
+			</section>
+			<section class="translate-source">
+				<h1>Select what you want to translate</h1>
+				<div class="translate-source-wrapper">
+					<input type="radio" value="website" name="source-select" id="website-select">
+					<label for="website-select"><i class="fa fa-cloud" aria-hidden="true"></i>
+					<br>Website</label>
+					<input type="radio" value="document" name="source-select" id="document-select" checked>
+					<label for="document-select"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+					<br>Document</label>
+					<input type="radio" value="social" name="source-select" id="social-select">
+					<label for="social-select"><i class="fa fa-users" aria-hidden="true"></i>
+					<br>Social account</label>
+					<br>
+					<div class="order-upload-document">
+						<h1>Upload your documents <small>(Doc, Docx, Text, PDF, Markdown)</small></h1>
+						<button class="upload-document"><i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload a new file</button>
+						<table class="loaded-documents-table">
+							<tr>
+								<th>File name</th>
+								<th>File size</th>
+								<th>Number of words</th>
+								<th>Remove</th>
+							</tr>
+							<tr>
+								<td><i class="fa fa-file-text-o" aria-hidden="true"></i> bussines_operations.docx</td>
+								<td>78kb</td>
+								<td>842</td>
+								<td><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-file-text-o" aria-hidden="true"></i> bussines_financial.docx</td>
+								<td>26kb</td>
+								<td>2,326</td>
+								<td><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</section>
+			<section class="order-translate-pairs">
+				<h1>Choose your languages pairings</h1>
+				<label for="input-language">From:</label>
+				<div class="select-wrapper input-language-select">
+					<select id="input-language">
+						<option value="russian">Russian</option>
+						<option value="spanish">Spanish</option>
+						<option value="france">France</option>
+						<option value="english">English</option>
+					</select>
+				</div>
+				<br>
+				<label for="output-language">To:</label>
+				<div class="select-wrapper">
+					<select>
+						<option value="arabic">Arabic</option>
+						<option value="kurdish">Kurdish</option>
+						<option value="france">France</option>
+						<option value="italic">Italic</option>
+					</select>
+				</div>
+				<div class="select-wrapper">
+					<select>
+						<option value="arabic">Kurdish</option>
+						<option value="kurdish">Russian</option>
+						<option value="france">France</option>
+						<option value="italic">Italic</option>
+					</select>
+				</div>
+				<a href=# ><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+				<button class="add-language"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+			</section>
+			<div class="sections-wrapper">
+				<section class="order-desired-tone">
+					<h1>Select your desired tone</h1>
+					<input type="radio" name="desired-tone" value="website" id="friendly">
+					<label for="friendly"><i class="fa fa-comments" aria-hidden="true"></i> Friendly / Casual</label>
+					<input type="radio" name="desired-tone" value="document" id="corporate" checked>
+					<label for="corporate"><i class="fa fa-briefcase" aria-hidden="true"></i> Corporate / Pro</label>
+					<input type="radio" name="desired-tone" value="social" id="formal">
+					<label for="formal"><i class="fa fa-paper-plane" aria-hidden="true"></i> Media / Formal</label>
+				</section>
+				<section class="order-urgent">
+					<h1>Tell us how urgent this job</h1>
+					<input type="range" min="1" max="3">
+					<div class="range-description">
+						<span>I got time</span>
+						<span>Average</span>
+						<span>Yesterday</span>
+					</div>
+					<section class="order-urgent-description">
+						<h1><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;Timeline info</h1>
+						<p>With an <em>Average</em> timeline set up, our expect translator can take a reseonable amount of time perfecting your translation.</p>
+					</section>
+				</section>
+			</div>
+			<section class="order-payment">
+				<h1>Sign up and choose a payment method</h1>
+				<small>Already have an account with us? <a href="#">Sign in</a></small>
+				<br>
+				<div class="input-wrapper">
+					<label for="full-name">Full name</label>
+					<br>
+					<input type="text" maxlength="30" class="input-field" id="full-name" required
+					placeholder="Methieu Mayer" pattern="^[A-Za-z]{3,}$">
+					<span></span>
+				</div>
+				<br>
+				<div class="input-wrapper">
+					<label for="email">Email address</label>
+					<br>
+					<input type="email" class="input-field" id="email" required placeholder="mathieu@mail.com"
+					pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+					<span></span>
+				</div>
+				<div class="input-wrapper">
+					<label for="password">Choose a password</label>
+					<br>
+					<input type="password" required class="input-field" id="password" pattern="[^]{6,}$">
+					<span></span>
+				</div>
+				<div class="payment-method-warapper">
+					<fieldset>
+						<input type="radio" name="payment-method" value="credit_card" id="credit-card" checked>
+						<label class="credit-cards" for="credit-card">
+							<img src="img/visa.png" alt="visa">
+							<img src="img/master.png" alt="mastercard">
+						</label>
+						<input type="radio" name="payment-method" value="paypal" id="paypal">
+						<label for="paypal"><img src="img/pp.png" alt="paypal"></label>
+						<input type="radio" name="payment-method"  value="amazon" id="amazon">
+						<label for="amazon"><img src="img/amazon.png" alt="amazon"></label>
+					</fieldset>
+					<div class="credit-card-fields">
+						<div class="card-number-wrapper">
+							<label>Card number</label>
+							<br>
+							<input type="text" class="input-field"
+							pattern="^(?:4[0-9]{12}(?:[0-9]{3})?)|(?:5[1-5][0-9]{14})$"
+							maxlength="16" placeholder="4012888888881881">
+							<span></span>
+						</div>
+						<div class="expiry-wrapper">
+							<label for="">Expiry date</label>
+							<br>
+							<input type="text" class="input-field" placeholder="DD/MM/YY" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])\/(0[1-9]|1[012])\/[0-9]{2}">
+							<span></span>
+						</div>
+						<div class="cvv-wrapper">
+							<label>Code</label>
+							<br>
+							<input type="password" maxlength="3" class="input-field"
+							pattern="^[0-9]{3,4}$">
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="order-confirm">
+				<input type="checkbox" id="agree-terms" required>
+				<label for="agree-terms">I agree to the <a href="#">Terms and Conditions</a></label>
+				<button class="place-order">Place order</button>
+				<button class="print-quote">Print a quoute</button>
+			</section>
+		</form>
+	</main>
+	<footer>
+		<div class=footer-container>
+			<section class=about>
+				<h3>WHAT WE DO</h3>
+				<p><em>We provide a full range of language services including content development,
+                    document, website and social media account accounts translation.</em></p>
+			</section>
+			<section class=adress>
+				<h3>OUR MAIN OFFICE</h3>
+				<address>
+                    Dubai, UAE <br>
+                    P.O. Box: 502735 <br>
+                    Phone: <a href="tel:+9710555555" class="phone">+971 (0) 555 555</a>
+                </address>
+			</section>
+			<section class=social>
+				<h3>CONNECT WITH US</h3>
+				<address>
+                    <ul>
+                        <li><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+                        <li><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+                    </ul>
+                </address>
+			</section>
+			<img src=./img/logo_black.png alt=logo />
+		</div>
+	</footer>
+</body>
+</html>
