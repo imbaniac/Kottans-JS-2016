@@ -1,21 +1,34 @@
 "use strict";
 
 const add = str => {
-	if(str == "") return 0;
+	const basicPattern = /[,\n]/g;
+	const escaperPattern = /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g;
+
 	let pattern;
 	let negatives = [];
+
+	if(str == "") return 0;
+
 	let array = str.match(/^\/\/(.+)\n/);
+
 	if (array){
 		let [{length}, delimArray] = array;
-		delimArray = delimArray.split(/[\[\]]/).filter(el => el);
-		let escapedDelimArray = delimArray.map(delim => {
-			let ed = delim.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-		 	return ed;
-		})
 		str = str.slice(length);
-		pattern = RegExp(escapedDelimArray, "g");
+		delimArray = delimArray.split(/[\[\]]/).filter(el => el);
+		if(delimArray.length>1){
+			delimArray.forEach(delim => {
+				let ed = delim.replace(escaperPattern, "\\$&");
+				pattern = new RegExp(ed, "g");
+				str = str.split(pattern).join();
+				pattern = basicPattern;
+			})
+		}
+		else{
+			let delim = delimArray[0].replace(escaperPattern, "\\$&");
+			pattern = RegExp(delim, "g");
+		}
 	}
-	else pattern = /[,\n]/g
+	else pattern = /[,\n]/g;
 
 	return str
 	.split(pattern)
@@ -31,6 +44,4 @@ const add = str => {
 	})
 }
 
-add("//[*][%]\n1*2%3");
-// add("//[***]\n1***2***3")
 module.exports = add;

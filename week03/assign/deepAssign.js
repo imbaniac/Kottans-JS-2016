@@ -7,7 +7,7 @@ function assignKey(to, from, key) {
 	let val = from[key],
 	isObj = typeof val == 'object' || typeof val == 'function'
 
-	if (val === undefined || val === null) return
+	if (val === null) return
 	if (hasProp.call(to, key) && (to[key] === undefined || to[key] === null)) {
 		throw new TypeError(`Cannot convert undefined or null to object ${key}`)
 	}
@@ -25,7 +25,7 @@ function assign(to, from) {
 	return to
 }
 function deepAssign(target, ...sources) {
-	if (target === null || target === undefined)
+	if (target == null)
 		throw new TypeError(`Sources cannot be null or undefined`);
 	let to = Object(target)
 	sources.forEach(source=>{

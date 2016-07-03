@@ -1,0 +1,14 @@
+{
+  "name": "mrs_promise",
+  "version": "0.0.1",
+  "description": "promise with map, reduce and some methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependecies": {
+    "mocha": "~2.1"
+  },
+  "author": "Tim",
+  "license": "MIT"
+}

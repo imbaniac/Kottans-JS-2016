@@ -55,4 +55,8 @@ describe('add', () => {
 	it("should allow multiple delimeters", () => {
 		add("//[*][%]\n1*2%3").should.equal(6);
 	})
+
+	it("should handle multiple delimeters with length more than 1", () => {
+		add("//[**][%][)))]\n1**2%3)))8").should.equal(14);
+	})
 });
